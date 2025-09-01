@@ -1,3 +1,39 @@
+/* General body setup */
+body {
+  margin: 0;
+  padding: 0;
+  background: #fdf6e3; /* warm background */
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+/* Main container: video | grid | title */
+.container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Video section */
+#player {
+  flex: 0 0 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: #fff3cd; /* soft yellow background */
+}
+
+video {
+  width: 100%;
+  max-width: 320px;
+  border: 8px solid #ffb74d; /* orange frame */
+  border-radius: 25px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  background: white;
+}
+
+/* Kanji grid container */
 #kanji-grid {
   flex: 1;
   display: flex;
@@ -6,12 +42,14 @@
   align-items: center;
 }
 
+/* Each row of kanji */
 .row {
   display: flex;
   justify-content: center;
   margin: 5px 0;
 }
 
+/* Kanji buttons */
 .kanji-btn {
   font-size: 32px;
   width: 70px;
@@ -24,3 +62,30 @@
   transition: all 0.2s ease;
   box-shadow: 2px 4px 8px rgba(0,0,0,0.2);
 }
+
+.kanji-btn:hover {
+  background: #ffe082; /* soft yellow hover */
+  transform: scale(1.15);
+  box-shadow: 3px 6px 12px rgba(0,0,0,0.25);
+}
+
+.kanji-btn:active {
+  transform: scale(0.9);
+}
+
+/* Vertical Japanese title */
+.title-vertical {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  font-size: 42px;
+  font-weight: bold;
+  padding: 20px;
+  border-left: 4px solid #ff9800;
+  background: #ffe082;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: -4px 0 10px rgba(0,0,0,0.15);
+}
+
