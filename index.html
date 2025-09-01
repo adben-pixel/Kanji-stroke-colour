@@ -2,22 +2,24 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>Kanji Stroke Order Learning</title>
+  <title>漢字筆順学習</title> <!-- Japanese title -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Learn Kanji Stroke Order</h1>
+  <div class="container">
+    
+    <!-- Vertical Japanese title -->
+    <div class="title-vertical">漢字筆順学習</div>
 
-  <!-- Kanji buttons will be placed here -->
-  <div id="kanji-grid"></div>
+    <!-- Main content: grid + video -->
+    <div class="content">
+      <div id="kanji-grid"></div>
+      <div id="player">
+        <video id="video" controls></video>
+      </div>
+    </div>
 
-  <!-- Video player -->
-  <div id="player">
-    <video id="video" controls></video>
   </div>
-
   <script src="script.js"></script>
 </body>
 </html>
-
-
