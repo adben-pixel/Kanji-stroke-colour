@@ -2,24 +2,48 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>漢字筆順学習</title> <!-- Japanese title -->
+  <title>漢字筆順学習</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
-    
-    <!-- Vertical Japanese title -->
-    <div class="title-vertical">漢字筆順学習</div>
 
-    <!-- Main content: grid + video -->
-    <div class="content">
-      <div id="kanji-grid"></div>
-      <div id="player">
-        <video id="video" controls></video>
-      </div>
+    <!-- Video player -->
+    <div id="player">
+      <video id="video" controls></video>
     </div>
 
+    <!-- Fixed Kanji grid layout -->
+    <div id="kanji-grid">
+      <!-- I’ll place them row by row -->
+      <div class="row">
+        <button class="kanji-btn">出</button>
+        <button class="kanji-btn">回</button>
+        <button class="kanji-btn">十</button>
+        <button class="kanji-btn">弓</button>
+        <button class="kanji-btn">穴</button>
+        <button class="kanji-btn">木</button>
+        <button class="kanji-btn">鳥</button>
+        <button class="kanji-btn">王</button>
+      </div>
+      <div class="row">
+        <button class="kanji-btn">来</button>
+        <button class="kanji-btn">食</button>
+        <button class="kanji-btn">百</button>
+        <button class="kanji-btn">車</button>
+        <button class="kanji-btn">日</button>
+        <button class="kanji-btn">麦</button>
+        <button class="kanji-btn">貝</button>
+        <button class="kanji-btn">口</button>
+      </div>
+      <!-- 👆 keep going row by row to match poster exactly -->
+    </div>
+
+    <!-- Vertical title -->
+    <div class="title-vertical">漢字筆順学習</div>
+
   </div>
+
   <script src="script.js"></script>
 </body>
 </html>
