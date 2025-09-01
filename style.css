@@ -1,5 +1,6 @@
 /* General body setup */
-body {
+body { background: pink; }
+
   margin: 0;
   padding: 0;
   background: #fdf6e3; /* warm background */
