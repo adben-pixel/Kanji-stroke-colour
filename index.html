@@ -2,120 +2,24 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>漢字筆順学習</title>
+  <title>漢字筆順学習</title> <!-- Japanese title -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
-
-    <!-- Video player on the left -->
-    <div id="player">
-      <video id="video" controls></video>
-    </div>
-
-    <!-- Fixed Kanji grid -->
-    <div id="kanji-grid">
-
-      <!-- First 7 rows of 8 (56 total) -->
-      <div class="row">
-        <button class="kanji-btn" data-file="001_出.mp4">出</button>
-        <button class="kanji-btn" data-file="002_回.mp4">回</button>
-        <button class="kanji-btn" data-file="003_十.mp4">十</button>
-        <button class="kanji-btn" data-file="004_弓.mp4">弓</button>
-        <button class="kanji-btn" data-file="005_穴.mp4">穴</button>
-        <button class="kanji-btn" data-file="006_木.mp4">木</button>
-        <button class="kanji-btn" data-file="007_鳥.mp4">鳥</button>
-        <button class="kanji-btn" data-file="008_王.mp4">王</button>
-      </div>
-
-      <div class="row">
-        <button class="kanji-btn" data-file="009_来.mp4">来</button>
-        <button class="kanji-btn" data-file="010_食.mp4">食</button>
-        <button class="kanji-btn" data-file="011_百.mp4">百</button>
-        <button class="kanji-btn" data-file="012_車.mp4">車</button>
-        <button class="kanji-btn" data-file="013_日.mp4">日</button>
-        <button class="kanji-btn" data-file="014_麦.mp4">麦</button>
-        <button class="kanji-btn" data-file="015_貝.mp4">貝</button>
-        <button class="kanji-btn" data-file="016_口.mp4">口</button>
-      </div>
-
-      <div class="row">
-        <button class="kanji-btn" data-file="017_書.mp4">書</button>
-        <button class="kanji-btn" data-file="018_行.mp4">行</button>
-        <button class="kanji-btn" data-file="019_千.mp4">千</button>
-        <button class="kanji-btn" data-file="020_皿.mp4">皿</button>
-        <button class="kanji-btn" data-file="021_月.mp4">月</button>
-        <button class="kanji-btn" data-file="022_豆.mp4">豆</button>
-        <button class="kanji-btn" data-file="023_角.mp4">角</button>
-        <button class="kanji-btn" data-file="024_耳.mp4">耳</button>
-      </div>
-
-      <div class="row">
-        <button class="kanji-btn" data-file="025_言.mp4">言</button>
-        <button class="kanji-btn" data-file="026_止.mp4">止</button>
-        <button class="kanji-btn" data-file="027_万.mp4">万</button>
-        <button class="kanji-btn" data-file="028_一.mp4">一</button>
-        <button class="kanji-btn" data-file="029_火.mp4">火</button>
-        <button class="kanji-btn" data-file="030_山.mp4">山</button>
-        <button class="kanji-btn" data-file="031_羽.mp4">羽</button>
-        <button class="kanji-btn" data-file="032_手.mp4">手</button>
-      </div>
-
-      <div class="row">
-        <button class="kanji-btn" data-file="033_大.mp4">大</button>
-        <button class="kanji-btn" data-file="034_交.mp4">交</button>
-        <button class="kanji-btn" data-file="035_寸.mp4">寸</button>
-        <button class="kanji-btn" data-file="036_二.mp4">二</button>
-        <button class="kanji-btn" data-file="037_音.mp4">音</button>
-        <button class="kanji-btn" data-file="038_川.mp4">川</button>
-        <button class="kanji-btn" data-file="039_虫.mp4">虫</button>
-        <button class="kanji-btn" data-file="040_足.mp4">足</button>
-      </div>
-
-      <div class="row">
-        <button class="kanji-btn" data-file="041_小.mp4">小</button>
-        <button class="kanji-btn" data-file="042_向.mp4">向</button>
-        <button class="kanji-btn" data-file="043_尺.mp4">尺</button>
-        <button class="kanji-btn" data-file="044_三.mp4">三</button>
-        <button class="kanji-btn" data-file="045_糸.mp4">糸</button>
-        <button class="kanji-btn" data-file="046_雨.mp4">雨</button>
-        <button class="kanji-btn" data-file="047_馬.mp4">馬</button>
-        <button class="kanji-btn" data-file="048_力.mp4">力</button>
-      </div>
-
-      <div class="row">
-        <button class="kanji-btn" data-file="049_白.mp4">白</button>
-        <button class="kanji-btn" data-file="050_歩.mp4">歩</button>
-        <button class="kanji-btn" data-file="051_上.mp4">上</button>
-        <button class="kanji-btn" data-file="052_四.mp4">四</button>
-        <button class="kanji-btn" data-file="053_刀.mp4">刀</button>
-        <button class="kanji-btn" data-file="054_風.mp4">風</button>
-        <button class="kanji-btn" data-file="055_魚.mp4">魚</button>
-        <button class="kanji-btn" data-file="056_目.mp4">目</button>
-      </div>
-
-      <!-- Next 5 rows of 9 (45 total) -->
-      <div class="row">
-        <button class="kanji-btn" data-file="057_青.mp4">青</button>
-        <button class="kanji-btn" data-file="058_考.mp4">考</button>
-        <button class="kanji-btn" data-file="059_中.mp4">中</button>
-        <button class="kanji-btn" data-file="060_五.mp4">五</button>
-        <button class="kanji-btn" data-file="061_舟.mp4">舟</button>
-        <button class="kanji-btn" data-file="062_水.mp4">水</button>
-        <button class="kanji-btn" data-file="063_羊.mp4">羊</button>
-        <button class="kanji-btn" data-file="064_首.mp4">首</button>
-        <button class="kanji-btn" data-file="065_人.mp4">人</button>
-      </div>
-
-      <!-- keep adding until 101_牛.mp4 in the same row-by-row style -->
-
-    </div>
-
-    <!-- Vertical title -->
+    
+    <!-- Vertical Japanese title -->
     <div class="title-vertical">漢字筆順学習</div>
+
+    <!-- Main content: grid + video -->
+    <div class="content">
+      <div id="kanji-grid"></div>
+      <div id="player">
+        <video id="video" controls></video>
+      </div>
+    </div>
 
   </div>
   <script src="script.js"></script>
 </body>
 </html>
-
