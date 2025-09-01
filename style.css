@@ -37,16 +37,15 @@ video {
 #kanji-grid {
 
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;   /* stack rows on top of each other */
+  align-items: center;      /* center the whole table */
+  gap: 6px;                 /* space between rows */
 }
 
-/* Each row of kanji */
 .row {
-  display: flex;
-  justify-content: center;
-  margin: 5px 0;
+  display: flex;            /* make buttons in a row go side by side */
+  justify-content: center;  /* center them horizontally */
+  gap: 6px;                 /* space between buttons */
 }
 
 /* Kanji buttons */
