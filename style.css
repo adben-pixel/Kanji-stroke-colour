@@ -21,11 +21,11 @@ body {
 }
 
 video {
-  width: 100%;
-  max-width: 640px;
+  width: 98%;
+  max-width: 540px;
   border: 2px solid #ffb74d;
   border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
   background: white;
 }
 
@@ -35,14 +35,14 @@ video {
   flex-direction: column;  /* rows stacked vertically */
   justify-content: center; /* center vertically */
   align-items: center;
-  gap: 4px;
+  gap: 8px;
   overflow: hidden;        /* prevent scrolling */
 }
 
 .row {
   display: flex;
   justify-content: center;
-  gap: 6px;
+  gap: 8px;
   margin: 0;
 }
 
@@ -60,6 +60,7 @@ video {
 
 .kanji-btn:hover { background: #ffe082; transform: scale(1.1); }
 .kanji-btn:active { transform: scale(0.95); }
+
 /* Column 3: Vertical title */
 .title-vertical {
   writing-mode: vertical-rl;
