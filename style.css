@@ -47,9 +47,9 @@ video {
 }
 
 .kanji-btn {
-  font-size: 32px;
-  width: 80px;    /* fits 12 rows in 1080px */
-  height: 80px;
+  font-size: 24px;
+  width: 45px;    /* fits 12 rows in 1080px */
+  height: 45px;
   background: #fff;
   border: 2px solid #ff9800;
   border-radius: 10px;
