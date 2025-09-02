@@ -4,7 +4,7 @@ body {
   padding: 0;
   font-family: "Noto Sans JP", sans-serif;
   height: 100vh;
-  background: linear-gradient(-45deg, #1c1c1c, #2c2c54, #3a3a7a, #1c1c1c);
+  background: linear-gradient(-45deg, #0d0d0d, #1a1a40, #262673, #0d0d0d);
   background-size: 400% 400%;
   animation: gradientShift 20s ease infinite;
   color: #fff;
@@ -36,14 +36,14 @@ video {
   max-width: 540px;
   border: 4px solid #ff9800;
   border-radius: 16px;
-  box-shadow: 0 0 20px rgba(255,152,0,0.7);
+  box-shadow: 0 0 25px rgba(255,152,0,0.8);
   background: #000;
   transition: box-shadow 0.4s ease;
 }
 
 video:focus,
 video:active {
-  box-shadow: 0 0 40px rgba(255,193,7,0.9);
+  box-shadow: 0 0 40px rgba(255,193,7,1);
 }
 
 /* === Column 2: Kanji table === */
@@ -51,7 +51,7 @@ video:active {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;   /* center horizontally */
+  align-items: center;
   gap: 6px;
   padding: 10px;
 }
@@ -65,6 +65,7 @@ video:active {
 
 /* === Buttons === */
 .kanji-btn {
+  position: relative;
   font-size: 22px;
   width: 55px;
   height: 55px;
@@ -72,18 +73,19 @@ video:active {
   border: 3px solid #ff9800;
   border-radius: 12px;
   cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.5);
   transition: transform 0.2s ease, background 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
 }
 
-/* Hover effect */
+/* Hover */
 .kanji-btn:hover {
   background: #ffcc80;
   transform: scale(1.15) rotate(-4deg);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.5), 0 0 10px rgba(255,200,0,0.6);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.6), 0 0 12px rgba(255,200,0,0.8);
 }
 
-/* Press effect */
+/* Active (click) */
 .kanji-btn:active {
   transform: scale(0.9) rotate(4deg);
   background: #ffb74d;
@@ -94,6 +96,26 @@ video:active {
   0%   { transform: scale(0.9) rotate(4deg); }
   50%  { transform: scale(1.1) rotate(-4deg); }
   100% { transform: scale(1) rotate(0deg); }
+}
+
+/* === Sparkle Effect === */
+.kanji-btn::after {
+  content: "✨";
+  position: absolute;
+  font-size: 16px;
+  opacity: 0;
+  animation: none;
+}
+
+.kanji-btn:active::after {
+  opacity: 1;
+  animation: sparkle 0.6s ease forwards;
+}
+
+@keyframes sparkle {
+  0%   { top: 50%; left: 50%; transform: translate(-50%, -50%) scale(0.5); opacity: 1; }
+  50%  { top: -10%; left: 80%; transform: scale(1.5); opacity: 1; }
+  100% { opacity: 0; }
 }
 
 /* === Column 3: Vertical title strip === */
@@ -108,7 +130,7 @@ video:active {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: -2px 0 10px rgba(0,0,0,0.5);
+  box-shadow: -2px 0 10px rgba(0,0,0,0.6);
   letter-spacing: 2px;
   text-shadow: 1px 1px 3px #fff;
 }
