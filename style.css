@@ -60,5 +60,19 @@ video {
 
 .kanji-btn:hover { background: #ffe082; transform: scale(1.1); }
 .kanji-btn:active { transform: scale(0.95); }
+/* Column 3: Vertical title */
+.title-vertical {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  font-size: 28px;
+  font-weight: bold;
+  padding: 12px;
+  border-left: 3px solid #ff9800;
+  background: #ffe082;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 }
