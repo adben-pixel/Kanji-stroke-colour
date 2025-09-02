@@ -8,9 +8,9 @@ body {
 }
 
 .container {
-  display: grid;                 /* use CSS Grid for 3 columns */
-  grid-template-columns: 30% 1fr 10px; /* left = video, middle = kanji, right = title */
-  height: 100vh;                 /* full viewport height */
+  display: grid;
+  grid-template-columns: 30% 1fr 50px; /* video | kanji | title */
+  height: 100vh;
 }
 
 /* Column 1: Video */
@@ -33,11 +33,12 @@ video {
 /* Column 2: Kanji table */
 #kanji-grid {
   display: flex;
-  flex-direction: column;  /* rows stacked vertically */
-  justify-content: center; /* center vertically */
-  align-items: center;
-  gap: 8px;
-  overflow: hidden;        /* prevent scrolling */
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;   /* align to the left edge */
+  padding-left: 10px;        /* small margin, not huge gap */
+  gap: 4px;
+
 }
 
 .row {
