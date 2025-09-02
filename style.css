@@ -19,7 +19,7 @@ body {
 /* === Layout: 3 columns === */
 .container {
   display: grid;
-  grid-template-columns: 30% 1fr 50px; /* video | kanji | title */
+  grid-template-columns: 25% 1fr 70px; /* video | kanji | title */
   height: 100vh;
 }
 
@@ -122,15 +122,16 @@ video:active {
 .title-vertical {
   writing-mode: vertical-rl;
   text-orientation: upright;
-  font-size: 28px;
+  font-size: 40px;
   font-weight: bold;
   background: linear-gradient(#ffeb3b, #ff9800);
-  border-left: 3px solid #ff5722;
+  border-left: 4px solid #ff5722;
   color: #111;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: -2px 0 10px rgba(0,0,0,0.6);
-  letter-spacing: 2px;
-  text-shadow: 1px 1px 3px #fff;
+  box-shadow: -2px 0 12px rgba(0,0,0,0.6);
+  letter-spacing: 3px;
+  text-shadow: 1px 1px 4px #fff;
+  padding: 15px;
 }
