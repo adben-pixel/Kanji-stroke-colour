@@ -67,15 +67,15 @@ video {
 .title-vertical {
   writing-mode: vertical-rl;
   text-orientation: upright;
-  font-size: 28px;
+  font-size: 26px;
   font-weight: bold;
-  padding: 12px;
-  border-left: 3px solid #ff9800;
-  background: #ffe082;
+  background: #ffeb99;
   color: #333;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-left: 3px solid #ff9800;
+  box-shadow: -2px 0 6px rgba(0,0,0,0.2);
 }
 
 }
