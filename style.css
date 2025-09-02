@@ -1,13 +1,11 @@
-/* General body setup */
-body { background: pink; }
-
+body {
   margin: 0;
   padding: 0;
-  background: #fdf6e3; /* warm background */
+  background: #fdf6e3; /* warm inviting background */
   font-family: "Noto Sans JP", sans-serif;
 }
 
-/* Main container: video | grid | title */
+/* Main container: grid on left, video on right, title at far edge */
 .container {
   display: flex;
   flex-direction: row;
@@ -15,46 +13,26 @@ body { background: pink; }
   overflow: hidden;
 }
 
-/* Video section */
-#player {
-  flex: 0 0 30%;
+/* Kanji grid (poster style) */
+#kanji-grid {
+  flex: 1;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px;
-  background: #fff3cd; /* soft yellow background */
-}
-
-video {
-  width: 100%;
-  max-width: 320px;
-  border: 8px solid #ffb74d; /* orange frame */
-  border-radius: 25px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-  background: white;
-}
-
-/* Kanji grid container */
-#kanji-grid {
-
-  display: flex;
-  flex-direction: column;   /* stack rows on top of each other */
-  align-items: center;      /* center the whole table */
-  gap: 6px;                 /* space between rows */
 }
 
 .row {
-  display: flex;            /* make buttons in a row go side by side */
-  justify-content: center;  /* center them horizontally */
-  gap: 6px;                 /* space between buttons */
+  display: flex;
+  justify-content: center;
+  margin: 4px 0;
+  gap: 4px;
 }
 
-/* Kanji buttons */
 .kanji-btn {
   font-size: 20px;
   width: 45px;
   height: 45px;
-  margin: 3px;
   background: #fff;
   border: 2px solid #ff9800;
   border-radius: 10px;
@@ -64,20 +42,38 @@ video {
 }
 
 .kanji-btn:hover {
-  background: #ffe082; /* soft yellow hover */
+  background: #ffe082;
   transform: scale(1.1);
-  box-shadow: 3px 6px 12px rgba(0,0,0,0.25);
 }
 
 .kanji-btn:active {
   transform: scale(0.95);
 }
 
-/* Vertical Japanese title */
+/* Video player */
+#player {
+  flex: 0 0 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: #fff3cd;
+}
+
+video {
+  width: 100%;
+  max-width: 400px;
+  border: 6px solid #ffb74d;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  background: white;
+}
+
+/* Vertical title strip */
 .title-vertical {
   writing-mode: vertical-rl;
   text-orientation: upright;
-  font-size: 42px;
+  font-size: 36px;
   font-weight: bold;
   padding: 20px;
   border-left: 4px solid #ff9800;
@@ -88,4 +84,3 @@ video {
   justify-content: center;
   box-shadow: -4px 0 10px rgba(0,0,0,0.15);
 }
-
