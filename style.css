@@ -3,18 +3,17 @@ body {
   padding: 0;
   background: #fdf6e3;
   font-family: "Noto Sans JP", sans-serif;
-  overflow: hidden; /* no scrollbars */
+  height: 100vh;
 }
 
 .container {
-  display: flex;
-  flex-direction: row; /* left to right layout */
-  height: 100vh;       /* full screen height */
+  display: grid;                 /* use CSS Grid for 3 columns */
+  grid-template-columns: 25% 1fr 60px; /* left = video, middle = kanji, right = title */
+  height: 100vh;                 /* full viewport height */
 }
 
-/* Video player on the left */
+/* Column 1: Video */
 #player {
-  flex: 0 0 35%; /* 35% width */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,32 +22,30 @@ body {
 
 video {
   width: 90%;
-  max-width: 340px;
+  max-width: 320px;
   border: 6px solid #ffb74d;
   border-radius: 16px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.3);
   background: white;
 }
 
-/* Kanji grid on the right */
+/* Column 2: Kanji table */
 #kanji-grid {
-  flex: 1;
   display: flex;
-  flex-direction: column;
-  justify-content: center; /* vertically center table */
+  flex-direction: column;  /* rows stacked vertically */
+  justify-content: center; /* center vertically */
   align-items: center;
   gap: 4px;
-  padding: 10px;
+  overflow: hidden;        /* prevent scrolling */
 }
 
-/* Each row of kanji */
 .row {
   display: flex;
   justify-content: center;
   gap: 4px;
 }
 
-/* Smaller buttons so full table fits on screen */
+/* Buttons */
 .kanji-btn {
   font-size: 16px;
   width: 36px;
@@ -64,7 +61,7 @@ video {
 .kanji-btn:hover { background: #ffe082; transform: scale(1.1); }
 .kanji-btn:active { transform: scale(0.95); }
 
-/* Vertical title strip */
+/* Column 3: Vertical title */
 .title-vertical {
   writing-mode: vertical-rl;
   text-orientation: upright;
