@@ -1,84 +1,114 @@
+/* === Global === */
 body {
   margin: 0;
   padding: 0;
-  background: linear-gradient(135deg, #fdf6e3, #fceabb);
   font-family: "Noto Sans JP", sans-serif;
   height: 100vh;
-
-
+  background: linear-gradient(-45deg, #1c1c1c, #2c2c54, #3a3a7a, #1c1c1c);
+  background-size: 400% 400%;
+  animation: gradientShift 20s ease infinite;
+  color: #fff;
 }
 
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* === Layout: 3 columns === */
 .container {
   display: grid;
   grid-template-columns: 30% 1fr 50px; /* video | kanji | title */
   height: 100vh;
 }
 
-/* Column 1: Video */
+/* === Column 1: Video === */
 #player {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #fff3cd;
+  background: rgba(0,0,0,0.3);
 }
 
 video {
-  width: 98%;
+  width: 95%;
   max-width: 540px;
-  border: 2px solid #ffb74d;
-  border-radius: 8px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-  background: white;
+  border: 4px solid #ff9800;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(255,152,0,0.7);
+  background: #000;
+  transition: box-shadow 0.4s ease;
 }
 
-/* Column 2: Kanji table */
+video:focus,
+video:active {
+  box-shadow: 0 0 40px rgba(255,193,7,0.9);
+}
+
+/* === Column 2: Kanji table === */
 #kanji-grid {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;   /* align to the left edge */
-  padding-left: 10px;        /* small margin, not huge gap */
-  gap: 4px;
-
+  align-items: center;   /* center horizontally */
+  gap: 6px;
+  padding: 10px;
 }
 
 .row {
   display: flex;
   justify-content: center;
-  gap: 8px;
+  gap: 6px;
   margin: 0;
 }
 
+/* === Buttons === */
 .kanji-btn {
-  font-size: 24px;
-  width: 45px;    /* fits 12 rows in 1080px */
-  height: 45px;
-  background: #fff;
-  border: 2px solid #ff9800;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  box-shadow: 1px 2px 4px rgba(0,0,0,0.2);
-}
-
-.kanji-btn {
-  font-size: 20px;
-  width: 60px;
-  height: 60px;
+  font-size: 22px;
+  width: 55px;
+  height: 55px;
   background: #fff;
   border: 3px solid #ff9800;
   border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+  transition: transform 0.2s ease, background 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Hover effect */
 .kanji-btn:hover {
   background: #ffcc80;
-  transform: scale(1.2) rotate(-5deg);
-  box-shadow: 0 8px 12px rgba(0,0,0,0.3);
+  transform: scale(1.15) rotate(-4deg);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.5), 0 0 10px rgba(255,200,0,0.6);
 }
 
+/* Press effect */
 .kanji-btn:active {
-  transform: scale(0.9);
+  transform: scale(0.9) rotate(4deg);
   background: #ffb74d;
+  animation: bounce 0.3s;
+}
+
+@keyframes bounce {
+  0%   { transform: scale(0.9) rotate(4deg); }
+  50%  { transform: scale(1.1) rotate(-4deg); }
+  100% { transform: scale(1) rotate(0deg); }
+}
+
+/* === Column 3: Vertical title strip === */
+.title-vertical {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  font-size: 28px;
+  font-weight: bold;
+  background: linear-gradient(#ffeb3b, #ff9800);
+  border-left: 3px solid #ff5722;
+  color: #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.5);
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 3px #fff;
 }
