@@ -1,9 +1,10 @@
 body {
   margin: 0;
   padding: 0;
-  background: #fdf6e3;
+  background: linear-gradient(135deg, #fdf6e3, #fceabb);
   font-family: "Noto Sans JP", sans-serif;
   height: 100vh;
+
 }
 
 .container {
