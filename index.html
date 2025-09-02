@@ -8,15 +8,9 @@
 <body>
   <div class="container">
 
-    <!-- Video on the left -->
-    <div id="player">
-      <video id="video" controls></video>
-    </div>
-
-    <!-- Kanji grid (rows hardcoded) -->
+    <!-- Kanji grid on the LEFT -->
     <div id="kanji-grid">
-
-      <!-- 7 rows of 8 -->
+  <!-- 7 rows of 8 -->
       <div class="row">
         <button class="kanji-btn" data-file="001_出.mp4">出</button>
         <button class="kanji-btn" data-file="002_回.mp4">回</button>
@@ -154,9 +148,12 @@
         <button class="kanji-btn" data-file="101_牛.mp4">牛</button>
       </div>
 
+    <!-- Video player on the RIGHT -->
+    <div id="player">
+      <video id="video" controls></video>
     </div>
 
-    <!-- Vertical title -->
+    <!-- Vertical title margin -->
     <div class="title-vertical">漢字筆順学習</div>
 
   </div>
@@ -164,3 +161,4 @@
   <script src="script.js"></script>
 </body>
 </html>
+
