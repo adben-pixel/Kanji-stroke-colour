@@ -1,86 +1,80 @@
 body {
   margin: 0;
   padding: 0;
-  background: #fdf6e3; /* warm inviting background */
+  background: #fdf6e3;
   font-family: "Noto Sans JP", sans-serif;
+  overflow: hidden; /* no scrollbars */
 }
 
-/* Main container: grid on left, video on right, title at far edge */
 .container {
   display: flex;
-  flex-direction: row;
-  height: 100vh;
-  overflow: hidden;
+  flex-direction: row; /* left to right layout */
+  height: 100vh;       /* full screen height */
 }
 
-/* Kanji grid (poster style) */
+/* Video player on the left */
+#player {
+  flex: 0 0 35%; /* 35% width */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff3cd;
+}
+
+video {
+  width: 90%;
+  max-width: 340px;
+  border: 6px solid #ffb74d;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  background: white;
+}
+
+/* Kanji grid on the right */
 #kanji-grid {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: center; /* vertically center table */
   align-items: center;
+  gap: 4px;
+  padding: 10px;
 }
 
+/* Each row of kanji */
 .row {
   display: flex;
   justify-content: center;
-  margin: 4px 0;
   gap: 4px;
 }
 
+/* Smaller buttons so full table fits on screen */
 .kanji-btn {
-  font-size: 20px;
-  width: 45px;
-  height: 45px;
+  font-size: 16px;
+  width: 36px;
+  height: 36px;
   background: #fff;
   border: 2px solid #ff9800;
-  border-radius: 10px;
+  border-radius: 6px;
   cursor: pointer;
   transition: all 0.2s ease;
   box-shadow: 1px 2px 4px rgba(0,0,0,0.2);
 }
 
-.kanji-btn:hover {
-  background: #ffe082;
-  transform: scale(1.1);
-}
-
-.kanji-btn:active {
-  transform: scale(0.95);
-}
-
-/* Video player */
-#player {
-  flex: 0 0 35%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  background: #fff3cd;
-}
-
-video {
-  width: 100%;
-  max-width: 400px;
-  border: 6px solid #ffb74d;
-  border-radius: 20px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-  background: white;
-}
+.kanji-btn:hover { background: #ffe082; transform: scale(1.1); }
+.kanji-btn:active { transform: scale(0.95); }
 
 /* Vertical title strip */
 .title-vertical {
   writing-mode: vertical-rl;
   text-orientation: upright;
-  font-size: 36px;
+  font-size: 28px;
   font-weight: bold;
-  padding: 20px;
-  border-left: 4px solid #ff9800;
+  padding: 12px;
+  border-left: 3px solid #ff9800;
   background: #ffe082;
   color: #333;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: -4px 0 10px rgba(0,0,0,0.15);
 }
