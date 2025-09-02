@@ -65,22 +65,24 @@ video {
   box-shadow: 1px 2px 4px rgba(0,0,0,0.2);
 }
 
-.kanji-btn:hover { background: #ffe082; transform: scale(1.1); }
-.kanji-btn:active { transform: scale(0.95); }
-
-/* Column 3: Vertical title */
-.title-vertical {
-  writing-mode: vertical-rl;
-  text-orientation: upright;
-  font-size: 26px;
-  font-weight: bold;
-  background: #ffeb99;
-  color: #333;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-left: 3px solid #ff9800;
-  box-shadow: -2px 0 6px rgba(0,0,0,0.2);
+.kanji-btn {
+  font-size: 20px;
+  width: 60px;
+  height: 60px;
+  background: #fff;
+  border: 3px solid #ff9800;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
 }
 
+.kanji-btn:hover {
+  background: #ffcc80;
+  transform: scale(1.2) rotate(-5deg);
+  box-shadow: 0 8px 12px rgba(0,0,0,0.3);
+}
+
+.kanji-btn:active {
+  transform: scale(0.9);
+  background: #ffb74d;
 }
