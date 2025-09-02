@@ -8,7 +8,7 @@ body {
 
 .container {
   display: grid;                 /* use CSS Grid for 3 columns */
-  grid-template-columns: 50% 1fr 10px; /* left = video, middle = kanji, right = title */
+  grid-template-columns: 90% 1fr 10px; /* left = video, middle = kanji, right = title */
   height: 100vh;                 /* full viewport height */
 }
 
